@@ -18,11 +18,7 @@ WORKDIR /app
 
 ENV NODE_ENV=production
 
-COPY package*.json ./
-RUN npm ci --only=production
-
-COPY --from=builder /app/dist ./dist 2>/dev/null || true
-
-EXPOSE 3000
-
-CMD ["node", "build-cdn.js"]
+# Copy built artifacts and node_modules directly from the builder stage
+COPY --from=builder /app/node_modules ./node_modules
+COPY --from=builder /app/dist ./dist
+COPY --from=builder /app/build-cdn.js ./
