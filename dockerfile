@@ -13,12 +13,12 @@ RUN npm run build --if-present
 
 # --- Stage 2: Production Stage ---
 FROM node:20-alpine AS runner
-
 WORKDIR /app
-
 ENV NODE_ENV=production
 
-# Copy built artifacts and node_modules directly from the builder stage
+COPY package*.json ./
 COPY --from=builder /app/node_modules ./node_modules
 COPY --from=builder /app/dist ./dist
 COPY --from=builder /app/build-cdn.js ./
+
+CMD ["npm", "start"]
