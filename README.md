@@ -1,65 +1,76 @@
 
-# Digito — DevOps Engineering Improvements
+# Digito — DevOps Engineering & CI/CD Automation
 
-[![DevOps](https://img.shields.io/badge/Focus-DevOps-blue)](https://github.com/Feezcodev)
-[![CI/CD](https://img.shields.io/badge/CI%2FCD-Automation-orange)](https://github.com/Feezcodev/digito)
-[![DevSecOps](https://img.shields.io/badge/Focus-DevSecOps-green)](https://github.com/Feezcodev/digito)
+[![CI/CD](https://img.shields.io/badge/CI%2FCD-GitHub_Actions-blue)](https://github.com/Feezcodev/digito)
+[![DevSecOps](https://img.shields.io/badge/DevSecOps-Security-green)](https://github.com/Feezcodev/digito)
+[![Docker](https://img.shields.io/badge/Containers-Docker-blue)](https://github.com/Feezcodev/digito)
 
 ## 📌 Overview
 
 This repository is my DevOps engineering contribution to [Digito](https://github.com/walebuilds/digito), an existing open-source project.
 
-My focus is on improving the development workflow through CI/CD automation, automated testing, security scanning, and containerization where applicable.
+My work focuses on improving software delivery through CI/CD automation, automated testing, security scanning, and containerization where applicable.
 
-The goal is to make software delivery more consistent, secure, and reliable by applying practical DevOps engineering principles.
+The objective is to establish reliable, repeatable development workflows that help maintain code quality, identify potential security issues, and improve the overall software delivery process.
 
-## 🎯 Key DevOps Contributions
+## 🎯 DevOps Engineering Contributions
 
 ### 1. CI/CD Automation
-- Configure GitHub Actions workflows to automate build and validation tasks.
-- Trigger workflows on code pushes and pull requests.
-- Provide early feedback when changes introduce errors.
+
+- Configured GitHub Actions workflows to automate development checks.
+- Automated workflow execution on relevant code changes and pull requests.
+- Improved feedback on code changes through pipeline validation.
 
 ### 2. Automated Testing and Code Quality
-- Integrate the tests supported by the application.
-- Automate linting and code-quality checks where applicable.
-- Help identify issues before code is merged.
+
+- Integrated supported automated tests into the CI workflow.
+- Automated applicable linting and validation checks.
+- Used pipeline results to identify issues before changes are merged.
 
 ### 3. Security and Vulnerability Scanning
-- Explore automated security checks using tools such as Trivy, Grype, or CodeQL.
-- Identify vulnerable dependencies and potential security issues.
-- Integrate security checks into the CI pipeline where appropriate.
+
+- Integrated applicable security checks into the development workflow.
+- Evaluated dependencies and code for potential security vulnerabilities.
+- Used automated scanning to support earlier detection of security issues.
 
 ### 4. Containerization
-- Evaluate the application for Docker support.
-- Develop an optimized Dockerfile if appropriate.
-- Use Docker Compose when multiple services or local development dependencies require it.
-- Improve consistency between development and deployment environments.
+
+- Applied Docker where appropriate for the application's architecture.
+- Validated container builds where containerization is implemented.
+- Focused on repeatable application environments and deployment consistency.
 
 ### 5. Release and Artifact Automation
-- Explore automated release workflows using GitHub Actions.
-- Automate version-based releases where appropriate.
-- Investigate artifact storage and package publishing if the project supports them.
 
-## 🛠️ Tools and Technologies
+- Explored automated release and artifact workflows where supported.
+- Focused on making software delivery more consistent and repeatable.
+
+## 🛠️ Technology Stack
 
 - **Version Control:** Git, GitHub
 - **CI/CD:** GitHub Actions
-- **Containers:** Docker, Docker Compose
-- **Security:** Trivy, Grype, CodeQL
-- **Scripting:** Linux, Bash
+- **Containers:** Docker, Docker Compose, where applicable
+- **Security:** Trivy, Grype, CodeQL, where configured
+- **Scripting and Environment:** Linux, Bash
 
-Tools will be integrated according to the application's architecture and actual requirements.
+## ⚙️ CI/CD Workflow
 
-## ⚙️ Proposed CI/CD Workflow
+The automated development workflow follows this general process:
 
-1. A developer pushes code or opens a pull request.
-2. GitHub Actions starts the CI pipeline.
-3. Dependencies are installed using the project's supported package manager.
-4. Available tests, linting, and build checks run.
-5. Security scans run when configured.
-6. Results are reported so issues can be addressed before merging.
-7. Release or container publishing workflows can be introduced when appropriate.
+1. Code changes are pushed or a pull request is opened.
+2. GitHub Actions triggers the configured workflow.
+3. Dependencies are prepared using the project's supported tools.
+4. Available tests, linting, and build checks are executed.
+5. Configured security scans run.
+6. Workflow results report whether the checks pass or fail.
+7. Successful validation supports the code review and integration process.
+
+## 📊 Validation Results
+
+The implemented checks have been executed, and all configured checks are passing.
+
+This provides a repeatable way to validate changes and identify potential issues before integration.
+
+For verification, see the repository's **Actions** tab and the corresponding workflow run logs.
 
 ## 🚀 Getting Started
 
@@ -70,44 +81,35 @@ git clone https://github.com/Feezcodev/digito.git
 cd digito
 ```
 
-### Inspect the project
+### Explore the project
 
-Review the existing documentation, project files, dependencies, and available scripts before installing or running the application.
+Review the existing project documentation and configuration files to understand the application, dependencies, and supported commands.
 
-Use the installation, testing, and build commands documented by the project. These commands may differ depending on the application's technology stack.
+Follow the original project's instructions for installing dependencies, running tests, and starting the application.
 
-## 📋 Implementation Progress
+## 📈 Engineering Outcomes
 
-- [ ] Review the existing application and dependencies
-- [ ] Configure GitHub Actions CI
-- [ ] Automate available tests and lint checks
-- [ ] Add appropriate security scanning
-- [ ] Evaluate and implement Docker support if applicable
-- [ ] Explore automated releases and artifact management
-- [ ] Document verified pipeline results
+This work demonstrates practical application of DevOps principles, including:
 
-## 📈 Expected Outcomes
-
-- Faster feedback on code changes
-- More consistent development workflows
-- Earlier detection of defects and vulnerabilities
-- Improved build and deployment repeatability
-- Better visibility into CI/CD execution
-
-These are the intended outcomes; actual improvements will be documented after implementation and testing.
+- Automation of repeatable development tasks.
+- Continuous validation of code changes.
+- Integration of security checks into software workflows.
+- Improved visibility into pipeline results.
+- More consistent build and delivery processes.
+- Documentation of engineering decisions and implementation.
 
 ## 👨‍💻 About Me
 
 I'm Feezco, a DevOps Engineer focused on CI/CD automation, cloud infrastructure, containerization, and DevSecOps.
 
-I build practical projects to improve software delivery, automate workflows, strengthen security, and develop reliable engineering environments.
+I work on practical engineering projects to automate workflows, improve software delivery, strengthen security, and build reliable development environments.
 
 **GitHub:** [@Feezcodev](https://github.com/Feezcodev)
 
-## 🙌 Attribution
+## 🙌 Acknowledgements
 
-This repository is a fork of the original [Digito repository by walebuilds](https://github.com/walebuilds/digito).
+This repository is a fork of [walebuilds/digito](https://github.com/walebuilds/digito).
 
-Credit goes to the original author and contributors for the existing application. My work focuses on DevOps improvements and related documentation.
+Credit goes to the original author and contributors for the existing project. My contribution focuses on DevOps engineering improvements and supporting documentation.
 
-Please refer to the original repository's license and contribution guidelines when using or modifying its code.
+Please refer to the original project's license and contribution guidelines when using or modifying its code.
