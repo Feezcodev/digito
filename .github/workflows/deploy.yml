@@ -37,13 +37,12 @@ jobs:
           host: ${{ secrets.EC2_HOST }}
           username: ubuntu
           key: ${{ secrets.EC2_SSH_KEY }}
-          envs: ECR_REGISTRY,AWS_ACCESS_KEY_ID,AWS_SECRET_ACCESS_KEY
           script: |
-            # Authenticate Docker with ECR
-            aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin $ECR_REGISTRY
+            # Authenticate Docker with ECR using the direct registry string
+            aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin ${{ steps.login-ecr.outputs.registry }}
             
-            # Pull the latest image, stop and remove old container, then run new one
-            docker pull $ECR_REGISTRY/digito:latest
+            # Pull, clean up old container, and run new container mapping port 80 to 3000
+            docker pull ${{ steps.login-ecr.outputs.registry }}/digito:latest
             docker stop digito-app || true
             docker rm digito-app || true
-            docker run -d --name digito-app -p 80:3000 $ECR_REGISTRY/digito:latest
+            docker run -d --name digito-app -p 80:3000 ${{ steps.login-ecr.outputs.registry }}/digito:latest
