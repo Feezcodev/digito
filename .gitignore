@@ -17,9 +17,8 @@ playwright-report/
 
 # Editor
 .vscode/
-.idea/.terraform/
+# Terraform
 *.tfstate
 *.tfstate.*
-crash.log
-*.tfvars
-*.pem
+.terraform/
+.terraform.lock.hcl
