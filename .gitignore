@@ -17,8 +17,18 @@ playwright-report/
 
 # Editor
 .vscode/
-# Terraform
+# Terraform working directory
+.terraform/
+
+# Terraform state files
 *.tfstate
 *.tfstate.*
-.terraform/
-.terraform.lock.hcl
+*.pem
+
+# Terraform crash logs
+crash.log
+crash.*.log
+
+# Sensitive variable files
+*.tfvars
+*.tfvars.json
